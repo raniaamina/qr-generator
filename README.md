@@ -1,6 +1,6 @@
 # QR Generator
 
-##Sekilas Tentang QR Generator
+## Sekilas Tentang QR Generator
 QR Generator merupakan perkakas yang dapat membantu Anda membuat gambar Kode QR dalam jumlah banyak secara sekaligus. Perkakas ini membutuhkan berkas *.csv sebagai sumber basis datanya. Paket `qrencode` diperlukan untuk menjalankan perkakas ini.
 
 ## Dependensi dan Prasyarat
