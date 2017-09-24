@@ -1,0 +1,33 @@
+#!/bin/bash
+#QR Generator by Rania Amina. Original source https://gist.github.com/elbym/97e7ed08b0c1e94d826e
+
+file=$1
+if [[ $file != *.csv ]]
+then
+  echo "Maaf, QR Generator hanya mendukung berkas *.csv!"
+  exit 1
+else
+  while read line
+  do
+    #membuat direktori
+    TEMPAT_OUTPUT=Hasil
+    if [ ! -d $TEMPAT_OUTPUT ]
+    then
+        mkdir $TEMPAT_OUTPUT
+     fi
+  
+    #membuat variabel dan menentukan are variabel
+    var1=$(cut -d ',' -f1 <<< "$line")
+    var2=$(cut -d ',' -f2 <<< "$line")
+    var3=$(cut -d ',' -f3 <<< "$line")
+    var4=$(cut -d ',' -f4 <<< "$line")
+  
+    #tampilan di terminal
+    echo $var1 - $var2 - $var3
+  
+    # generate QR-code
+    qrencode -s 50 -l H -o "Hasil/$var4".png "$var1 $var2 $var3"
+       #nama berkas database
+  done < $1
+fi
+rm -f ../Hasil/nama-berkas.png
