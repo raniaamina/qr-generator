@@ -6,6 +6,7 @@ QR Generator merupakan perkakas yang dapat membantu Anda membuat gambar Kode QR 
 ## Dependensi dan Prasyarat
 ### Dependensi
 - qrencode
+`sudo apt install qrencide` (untuk Debian dan turunannya, distribusi silakan disesuaikan)
 ### Prasyarat
 - Berkas *.csv 
 QR Generator (secara _default_) akan membaca empat kolom data dalam berkas *.csv. Kolom satu sampai tiga tersebut dapat diisi data sesuai dengan kebutuhan Anda, sedangkan kolom keempat merupakan nama berkas yang nantinya akan digunakan untuk menamai berkas hasil ekspor. (lihat contoh berkas csv yang tersedia)
