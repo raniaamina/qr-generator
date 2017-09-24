@@ -7,7 +7,7 @@ then
   echo "Maaf, QR Generator hanya mendukung berkas *.csv!"
   exit 1
 else
-	i=0
+  i=0
   while read line
   do
     #membuat direktori
@@ -26,16 +26,16 @@ else
     #tampilan di terminal
     echo $var1 - $var2 - $var3
 
-		#first, check i value
+    #first, check i value
     if [[ "$i" -eq "0" ]]
     then
-    	# going to next loop
-    	i=1
-    	continue
+      # going to next loop
+      i=1
+      continue
     else
       # otherwise, generate QR-code when reach 2nd line
-	    qrencode -s 50 -l H -o "Hasil/$var4".png "$var1 $var2 $var3"
-	  fi
+      qrencode -s 50 -l H -o "Hasil/$var4".png "$var1 $var2 $var3"
+    fi
    #nama berkas database
   done < $1
 fi
