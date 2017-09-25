@@ -16,7 +16,7 @@ QR Generator (secara _default_) akan membaca empat kolom data dalam berkas *.csv
 2. Pastikan berkas `qr-generator` telah dapat dieksusi. Jika belum, maka jalankan perintah `sudo chmod +x qr-generator`
 3. Pastikan Anda telah membuat berkas csv dengan ketentuan yang telah disebutkan di atas. Simpan berkas csv ke dalam direktori tempat Anda menyalin berkas `qr-generator` 
 4. Buka terminal Anda, dan arahkan ke direktori tersebut
-5. Jalankan perintah `./qr-generator berkas.csv`
+5. Jalankan perintah `./qr-generator`, keluaran dari Terminal akan memandu Anda untuk melakukan langkah selanjutnya
 6. QR Generator akan membuat direktori 	`Hasil` yang berisi berkas-berkas gambar berisi kode QR.
 
 ## Sumber
