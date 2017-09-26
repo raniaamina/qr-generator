@@ -1,5 +1,5 @@
 #!/bin/bash
-#QR Generator by Rania Amina. Original source https://gist.github.com/elbym/97e7ed08b0c1e94d826e
+#QR Generator Versi 0.2.0 by Rania Amina. Original source https://gist.github.com/elbym/97e7ed08b0c1e94d826e
 
 clear
 printf "==========================
@@ -7,7 +7,7 @@ Tulis Nama Berkas CSV Anda
 ==========================\n
 Contoh Penulisan: \nBerkas.csv, /home/user/Berkas.csv, atau ../Berkas.csv\n\n"
 # choose the database
-read -p "Berkas: " DATACSV
+read -e -p "Berkas: " DATACSV
 
 # export option
 echo
@@ -35,7 +35,7 @@ else
   while read line
   do
     #create folder
-    TEMPAT_OUTPUT=Hasil
+    TEMPAT_OUTPUT=$HOME/QR-Generator
     if [ ! -d $TEMPAT_OUTPUT ]
     then
         mkdir -p $TEMPAT_OUTPUT
@@ -58,7 +58,7 @@ else
       continue
     else
       # otherwise, generate QR-code when reach 2nd line
-      qrencode -t $TYPE -d 96 -s 30 -l H -o "Hasil/$var4".$TYPE "$var1 $var2 $var3"
+      qrencode -t $TYPE -d 96 -s 30 -l H -o "$HOME/QR-Generator/$var4".$TYPE "$var1 $var2 $var3"
     fi    
    #database name
   done < $DATACSV
